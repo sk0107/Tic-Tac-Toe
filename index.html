@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1 id="title" class="start">Welcome to Tic Tac Toe!</h1>
+        <div class="container">
+            <ol id="instructions" class="start">
+                <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+                <li>You are X, your friend (or the computer if you choose so) is O. Players take turns putting their marks in empty squares.</li>
+                <li>The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.</li>
+                <li>When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</li>
+            </ol>
+        </div>
+        <button type="button" onclick="startEasyComputerGame()" class="start start-button">Easy Computer</button>
+        <button type="button" onclick="startMediumComputerGame()" class="start start-button">Medium Computer</button>
+        <button type="button" onclick="startHardComputerGame()" class="start start-button">Hard Computer</button>
+        <button type="button" onclick="startFriendGame()" class="start start-button">Friend</button>
+        <div class="board game">
+            <canvas id="board" onclick="playGame(event)"></canvas>
+        </div>
+        <div class="container">
+            <p id="result" class="game"></p>
+        </div>
+        <div class="container">
+            <button id="back-button" type="button" onclick="goBack()" class="game">Go back</button>
+        </div>
+    </body>
+</html>
